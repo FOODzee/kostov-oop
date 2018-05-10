@@ -88,6 +88,30 @@
     },
     {
       "key": {
+        "uuid": "74928c02_312d866d",
+        "filename": "Base.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T10:52:18Z",
+      "side": 1,
+      "message": "ну а зачем ему геттер, если оно константное и его только при конструировании присвоить можно будет?",
+      "parentUuid": "d4652036_8c6d6a21",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 22
+      },
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a1a8faf0_b4e4e1a5",
         "filename": "Container.h",
         "patchSetId": 1
@@ -139,6 +163,24 @@
       "writtenOn": "2018-05-10T09:41:40Z",
       "side": 1,
       "message": "а почему не ++count?",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "958eae9a_bbe64cc8",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T10:52:18Z",
+      "side": 1,
+      "message": "потому что мне не важно, здесь пост- или пре-инкремент будет, ведь результат этого выражения я тут не использую. Какой-то другой разницы между ними я не знаю, а пост-инкремент мне синтаксически нравится больше.",
+      "parentUuid": "1d54c521_90b7ca31",
       "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
@@ -202,6 +244,24 @@
     },
     {
       "key": {
+        "uuid": "e2f98416_fabebaff",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T10:52:18Z",
+      "side": 1,
+      "message": "а что такое \"вывернутый\"? я не понял это определение, поэтому не стал тут что-то про него городить.\n\n2) а когда ещё взрываться? https://stackoverflow.com/a/810850",
+      "parentUuid": "033bb468_ae9ecfe7",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c5636ab3_236b75ba",
         "filename": "Shapes.h",
         "patchSetId": 1
@@ -230,6 +290,24 @@
       "writtenOn": "2018-05-10T09:41:40Z",
       "side": 1,
       "message": "вырожденный полигон -- да ладно, нормальный полигон",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "307331e3_7c4e776a",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T10:52:18Z",
+      "side": 1,
+      "message": "мне не понравился ¯\\_(ツ)_/¯",
+      "parentUuid": "806a2e79_250a36e5",
       "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
