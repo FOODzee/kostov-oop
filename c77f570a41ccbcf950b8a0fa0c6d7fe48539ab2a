@@ -112,6 +112,30 @@
     },
     {
       "key": {
+        "uuid": "4f393679_f368d76a",
+        "filename": "Base.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T11:09:18Z",
+      "side": 1,
+      "message": "это да\n\nно по-прежнему труднее отследить доступ (например, бряку поставить в геттере)",
+      "parentUuid": "74928c02_312d866d",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 22
+      },
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a1a8faf0_b4e4e1a5",
         "filename": "Container.h",
         "patchSetId": 1
@@ -181,6 +205,24 @@
       "side": 1,
       "message": "потому что мне не важно, здесь пост- или пре-инкремент будет, ведь результат этого выражения я тут не использую. Какой-то другой разницы между ними я не знаю, а пост-инкремент мне синтаксически нравится больше.",
       "parentUuid": "1d54c521_90b7ca31",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "557ac5f8_3d0a8342",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T11:09:18Z",
+      "side": 1,
+      "message": "читатель кода может подумать, что вы не знаете разницы, раз не используете более эффективный вариант",
+      "parentUuid": "958eae9a_bbe64cc8",
       "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
