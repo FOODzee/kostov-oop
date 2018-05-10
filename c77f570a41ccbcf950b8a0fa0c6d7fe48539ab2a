@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "d2d28a25_12e44008",
+        "filename": "Base.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T19:27:05Z",
+      "side": 1,
+      "message": "мда, он же с хедером затянется и на весь использующий Base.h код повлияет \u003d\\",
+      "parentUuid": "5a7b9197_fd60ccbb",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 20
+      },
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cbf275f4_9cbdaf89",
         "filename": "Base.h",
         "patchSetId": 1
@@ -59,6 +83,24 @@
       "writtenOn": "2018-05-10T09:41:40Z",
       "side": 1,
       "message": "почему у именованного объекта нельзя будет спросить его имя?\n\nкакой-то именованный наследник, возможно, будет уметь себя печатать как-то похитрее?",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "585d8dc7_7cc858e8",
+        "filename": "Base.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T19:27:05Z",
+      "side": 1,
+      "message": "имя можно взять из публичного read-only поля, и от наследника тоже, если он публично отнаследуется.",
+      "parentUuid": "cbf275f4_9cbdaf89",
       "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
@@ -176,6 +218,24 @@
     },
     {
       "key": {
+        "uuid": "1b7bd05a_454f8106",
+        "filename": "ShapeFactory.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T19:27:05Z",
+      "side": 1,
+      "message": "большую часть копирований, по идее, компилятор выбросит: https://en.wikipedia.org/wiki/Copy_elision\n\nплюс, в задании эффективность требовалась только от класса Container, но не от фабрики и фигур, поэтому я предпочёл положиться здесь на мудрость компилятора и не париться с ручным удалением в нужные моменты выделенных в куче объектов.\n\nВ принципе, могу на выходных с rValue Reference разобраться и на них попробовать переписать, или унести все объекты в кучу и добавить им деструкторов с delete\u0027ами, если вы считаете что это необходимо.",
+      "parentUuid": "b42fd956_9ba77b5e",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1d54c521_90b7ca31",
         "filename": "Shapes.h",
         "patchSetId": 1
@@ -264,6 +324,24 @@
     },
     {
       "key": {
+        "uuid": "e61395ef_32dceafc",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T19:27:05Z",
+      "side": 1,
+      "message": "не то чтобы это \"у меня\" так -- у вас в задании именно это написано:\n\u003e Создать класс Named – наследник Printable\n\u003e Создать абстрактный класс Shape – наследник Printable\nhttps://sites.google.com/site/kostovoop/tasks\n\nНу а вообще в таком ромбике ничего слишком плохого нет -- в Printable единственный объявленный метод -- абстрактный, в Shape он не переопределяется и остаётся абстрактным от супера, из Named приходит \"дефолтная\" реализация, но из-за override это всё ещё виртуальный метод, поэтому он спокойно перекрывается print\u0027ом из Point.",
+      "parentUuid": "8f449a87_1c070010",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "988bf14d_64e53625",
         "filename": "Shapes.h",
         "patchSetId": 1
@@ -275,6 +353,30 @@
       "writtenOn": "2018-05-10T09:41:40Z",
       "side": 1,
       "message": "что будет, если написать просто Named( \"Point\" ) ?\n\n2) я вообще думал, что именованная точка, это точка, у которой есть имя... у вас все точки имеют одно имя, как-то стрёмно",
+      "range": {
+        "startLine": 50,
+        "startChar": 32,
+        "endLine": 50,
+        "endChar": 54
+      },
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e0c34e9_e57d8165",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T19:27:05Z",
+      "side": 1,
+      "message": "добавил соответствующий конструктор.\n\n2) аа, вон что. Ну если хотите, могу добавить всем фигурам конструкторы, которые конкретное имя принимают.",
+      "parentUuid": "988bf14d_64e53625",
       "range": {
         "startLine": 50,
         "startChar": 32,
@@ -333,6 +435,24 @@
       "writtenOn": "2018-05-10T09:41:40Z",
       "side": 1,
       "message": "хм, а кто запретит квадрату стать неквадратным?",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d5c9c81e_c98a1f87",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T19:27:05Z",
+      "side": 1,
+      "message": "у Rect поля-точки -- константные, поэтому даже несмотря на мутабельность самих Point\u0027ов, изменить их координаты у существующего Rect\u0027а нельзя (законными способами, без грязных хаков вроде `-fpermissive`).",
+      "parentUuid": "c5636ab3_236b75ba",
       "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
