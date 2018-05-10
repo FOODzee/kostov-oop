@@ -1,0 +1,238 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "249c19c8_9f4c131f",
+        "filename": "Base.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "#pragma once",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 25
+      },
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a7b9197_fd60ccbb",
+        "filename": "Base.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "почему это плохо?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 20
+      },
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cbf275f4_9cbdaf89",
+        "filename": "Base.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "почему у именованного объекта нельзя будет спросить его имя?\n\nкакой-то именованный наследник, возможно, будет уметь себя печатать как-то похитрее?",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4652036_8c6d6a21",
+        "filename": "Base.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "публичное поле? ого себе",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 22
+      },
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a1a8faf0_b4e4e1a5",
+        "filename": "Container.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "if( empty() )   ?\n\nа зачем, кстати, взрываться?",
+      "range": {
+        "startLine": 129,
+        "startChar": 4,
+        "endLine": 129,
+        "endChar": 51
+      },
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b42fd956_9ba77b5e",
+        "filename": "ShapeFactory.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "а почему у вас всё время всё копируется? Нельзя ли как-то адресами манипулировать?",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d54c521_90b7ca31",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "а почему не ++count?",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8f449a87_1c070010",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "у вас Point -- дважды Printable?",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "988bf14d_64e53625",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "что будет, если написать просто Named( \"Point\" ) ?\n\n2) я вообще думал, что именованная точка, это точка, у которой есть имя... у вас все точки имеют одно имя, как-то стрёмно",
+      "range": {
+        "startLine": 50,
+        "startChar": 32,
+        "endLine": 50,
+        "endChar": 54
+      },
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "033bb468_ae9ecfe7",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "а вывернутый может быть?\n\n2) не слишком ли жёстко взрываться при создании?",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c5636ab3_236b75ba",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "хм, а кто запретит квадрату стать неквадратным?",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "806a2e79_250a36e5",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-10T09:41:40Z",
+      "side": 1,
+      "message": "вырожденный полигон -- да ладно, нормальный полигон",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
