@@ -229,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "87b614e6_71c552f0",
+        "filename": "Shapes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1014245
+      },
+      "writtenOn": "2018-05-10T11:17:34Z",
+      "side": 1,
+      "message": "мм, я вполне уверен, что компилятор способен увидеть, что результат выражения здесь не используется, и потому породит для `c++` и `++c` одинаковый код.",
+      "parentUuid": "557ac5f8_3d0a8342",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8f449a87_1c070010",
         "filename": "Shapes.h",
         "patchSetId": 1
