@@ -10,7 +10,7 @@ TEST_CASE( "empty" ) {
 TEST_CASE( "get/del on empty" ) {
     auto c = Container<nullptr_t>();
     REQUIRE_THROWS_AS( c.getFirst(), EmptyContainerException );
-    REQUIRE_THROWS_AS( c.delFirst(), EmptyContainerException );
+    c.delFirst();
 }
 
 TEST_CASE( "single" ) {

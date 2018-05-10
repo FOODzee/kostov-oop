@@ -1,5 +1,4 @@
-#ifndef KOSTOV_OOP_SHAPES_H
-#define KOSTOV_OOP_SHAPES_H
+#pragma once
 
 #include <cmath>
 #include <sstream>
@@ -7,12 +6,10 @@
 #include "Base.h"
 #include "Container.h"
 
-using namespace std;
-
 
 #define EPSILON 0.000001
 inline bool eq(double a, double b) {
-    return abs(a - b) <= EPSILON;
+    return fabs(a - b) <= EPSILON;
 }
 inline double sq(double a) {
     return a*a;
@@ -32,7 +29,7 @@ public:
         count--;
     }
 
-    friend ostream& operator<<(ostream& os, const Shape& shape) {
+    friend std::ostream& operator<<(std::ostream& os, const Shape& shape) {
         return os << shape.print();
     }
 
@@ -47,11 +44,11 @@ private:
 
 class Point : public Shape, public Named {
 public:
-    Point(double x, double y) : Named(string("Point")), x(x), y(y) {}
+    Point(double x, double y) : Named("Point"), x(x), y(y) {}
     Point(const Point& p) = default;
 
-    const string print() const override {
-        stringstream s;
+    const std::string print() const override {
+        std::stringstream s;
         s << "Point(" << x << ", " << y << ")";
         return s.str();
     }
@@ -75,13 +72,13 @@ public:
 
 class Circle : public Shape, public Named {
 public:
-    Circle(const Point& c, double r) : Named(string("Circle")), c(c), r(r) {
+    Circle(const Point& c, double r) : Named("Circle"), c(c), r(r) {
         if (r <= 0) throw std::invalid_argument("Circle must have positive radius.");
     }
     Circle(const Circle& c) = default;
 
-    const string print() const override {
-        stringstream s;
+    const std::string print() const override {
+        std::stringstream s;
         s << "Circle(" << c << ", r = " << r << ", area = " << area() << ")";
         return s.str();
     }
@@ -97,16 +94,16 @@ public:
 
 class Rect : public Shape, public Named {
 protected:
-    Rect(const Point& a, const Point& b, const string& name) : Named(name), a(a), b(b) {
+    Rect(const Point& a, const Point& b, const char* name) : Named(name), a(a), b(b) {
         if (eq(a.x, b.x) || eq(a.y, b.y)) throw std::invalid_argument("Rectangle must not be a line or dot");
     }
 
 public:
-    Rect(const Point& a, const Point& b) : Rect(a, b, string("Rect")) {}
+    Rect(const Point& a, const Point& b) : Rect(a, b, "Rect") {}
     Rect(const Rect& r) = default;
 
-    const string print() const override {
-        stringstream s;
+    const std::string print() const override {
+        std::stringstream s;
         s << name << "(" << a << ", " << b << ", area = " << area() << ")";
         return s.str();
     }
@@ -122,7 +119,7 @@ public:
 
 class Square : public Rect {
 public:
-    Square(const Point& a, const Point& b) : Rect(a, b, string("Square")) {
+    Square(const Point& a, const Point& b) : Rect(a, b, "Square") {
         if (!eq(abs(a.x - b.x), abs(a.y - b.y))) throw std::invalid_argument("Square must have equal sides");
     }
     Square(const Square& s) = default;
@@ -131,10 +128,10 @@ public:
 
 class Polyline : public Shape, public Named {
 protected:
-    Polyline(const string& name) : Named(name) {}
+    Polyline(const char* name) : Named(name) {}
 
 public:
-    Polyline() : Polyline(string("Polyline")) {}
+    Polyline() : Polyline("Polyline") {}
     Polyline(const Polyline& p) = default;
 
     virtual Polyline& addPoint(const Point& p) {
@@ -142,10 +139,10 @@ public:
         return *this;
     }
 
-    const string print() const override {
+    const std::string print() const override {
         if (points.getSize() < 2) throw VertexUnderflow();
 
-        stringstream s;
+        std::stringstream s;
         s << name << "(";
         points.forEach(
                 [&] (const Point& p) { s << p << ", "; }
@@ -186,7 +183,7 @@ protected:
 
 class Polygon : public Polyline {
 public:
-    Polygon() : Polyline(string("Polygon")), complete(false) {}
+    Polygon() : Polyline("Polygon"), complete(false) {}
     Polygon(const Polygon& p) = default;
 
     Polyline& addPoint(const Point& p) override {
@@ -208,9 +205,9 @@ public:
         return length();
     }
 
-    const string print() const override {
+    const std::string print() const override {
         if (!complete) throw Incomplete();
-        string s = Polyline::print();
+        std::string s = Polyline::print();
         size_t i = s.find("length");
         return s.replace(i, 6, " perim");
     }
@@ -238,5 +235,3 @@ public:
 private:
     bool complete;
 };
-
-#endif //KOSTOV_OOP_SHAPES_H

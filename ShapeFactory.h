@@ -1,6 +1,4 @@
-#ifndef KOSTOV_OOP_SHAPEFACTORY_H
-#define KOSTOV_OOP_SHAPEFACTORY_H
-
+#pragma once
 
 #include "Shapes.h"
 
@@ -29,6 +27,3 @@ namespace ShapeFactory {
     Polyline GenPolyline();
     Polygon  GenPolygon();
 }
-
-
-#endif //KOSTOV_OOP_SHAPEFACTORY_H

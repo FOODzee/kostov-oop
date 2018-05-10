@@ -1,26 +1,22 @@
-#ifndef KOSTOV_OOP_BASE_H
-#define KOSTOV_OOP_BASE_H
+#pragma once
 
 #include <string>
 #include <limits>
 
-using namespace std;
-
 class Printable {
 public:
-    virtual const string print() const = 0;
+    virtual const std::string print() const = 0;
 };
 
 class Named : public Printable {
 public:
-    Named(const string& name) : name(name) {}
+    Named(const char* name) : Named(std::string(name)) {}
+    Named(const std::string& name) : name(name) {}
     Named(const Named& n) : name(n.name) {}
 
-    const string print() const override {
+    const std::string print() const override {
         return name;
     }
 
-    const string name;
+    const std::string name;
 };
-
-#endif //KOSTOV_OOP_BASE_H

@@ -1,6 +1,4 @@
-#ifndef KOSTOV_OOP_CONTAINER_H
-#define KOSTOV_OOP_CONTAINER_H
-
+#pragma once
 
 #include <cassert>
 #include <exception>
@@ -77,7 +75,7 @@ public:
 template<typename T>
 void Container<T>::addFirst(const T& value) {
     auto e = new Elem(value);
-    if (size == 0) {
+    if (isEmpty()) {
         assert(first == nullptr && last == nullptr);
         first = last = e;
     } else {
@@ -92,7 +90,7 @@ void Container<T>::addFirst(const T& value) {
 template<typename T>
 void Container<T>::addLast(const T& value) {
     auto e = new Elem(value);
-    if (size == 0) {
+    if (isEmpty()) {
         assert(first == nullptr && last == nullptr);
         first = last = e;
     } else {
@@ -107,7 +105,11 @@ void Container<T>::addLast(const T& value) {
 
 template<typename T>
 void Container<T>::delFirst() {
-    if (size == 0) throw EmptyContainerException();
+    if (isEmpty()) {
+        // nothing to do
+        return;
+    }
+
     size--;
     auto e = first;
 
@@ -126,7 +128,11 @@ void Container<T>::delFirst() {
 
 template<typename T>
 void Container<T>::delLast() {
-    if (size == 0) throw EmptyContainerException();
+    if (isEmpty()) {
+        // nothing to do
+        return;
+    }
+
     size--;
     auto e = last;
 
@@ -146,25 +152,25 @@ void Container<T>::delLast() {
 
 template<typename T>
 const T& Container<T>::getFirst() const {
-    if (size == 0) throw EmptyContainerException();
+    if (isEmpty()) throw EmptyContainerException();
     return first->value;
 }
 
 template<typename T>
 const T& Container<T>::getLast() const {
-    if (size == 0) throw EmptyContainerException();
+    if (isEmpty()) throw EmptyContainerException();
     return last->value;
 }
 
 
 template<typename T>
 void Container<T>::forEach(std::function<void(const T&)> action, int skipFirstN) const {
-    for (auto p = first; p != nullptr; p = p->next) {
-        if (skipFirstN-- > 0) continue;
+    auto p = first;
+    for (; p != nullptr; p = p->next) {
+        if (skipFirstN-- == 0) break;
+    }
 
+    for (; p != nullptr; p = p->next) {
         action(p->value);
     }
 }
-
-
-#endif //KOSTOV_OOP_CONTAINER_H
