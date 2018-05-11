@@ -236,6 +236,24 @@
     },
     {
       "key": {
+        "uuid": "95a6513e_e0e541e3",
+        "filename": "ShapeFactory.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1001276
+      },
+      "writtenOn": "2018-05-11T05:54:16Z",
+      "side": 1,
+      "message": "да нет, ничего делать не нужно\n\nпросто немного покоробило... у вас GenShape() делает new, следовательно, вы могли бы сразу заньючить объект в глубине, и передавать наружу указатель, чем как у вас: мильён копирований, а в конце new.",
+      "parentUuid": "1b7bd05a_454f8106",
+      "revId": "c77f570a41ccbcf950b8a0fa0c6d7fe48539ab2a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1d54c521_90b7ca31",
         "filename": "Shapes.h",
         "patchSetId": 1
